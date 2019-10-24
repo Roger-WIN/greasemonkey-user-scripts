@@ -2,6 +2,7 @@
 // @name             萌娘百科优先简体中文
 // @namespace        https://github.com/Roger-WIN/greasemonkey-user-scripts
 // @description      Moegirl 萌娘百科优先使用简体中文浏览
+// @author           Roger Kung
 // @match            *.moegirl.org/*
 // @version          1.0
 // @icon             https://zh.moegirl.org/favicon.ico
