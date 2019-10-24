@@ -2,11 +2,11 @@
 // @name             萌娘百科优先简体中文
 // @namespace        https://github.com/Roger-WIN/greasemonkey-user-scripts
 // @description      Moegirl 萌娘百科优先使用简体中文浏览
-// @author           Roger Kung
+// @author           神齐
 // @match            *.moegirl.org/*
 // @version          1.0
-// @icon             https://zh.moegirl.org/favicon.ico
 // @updateURL        https://raw.githubusercontent.com/Roger-WIN/greasemonkey-user-scripts/master/Chinese%20(Simplified)%20first%20for%20Moegirl.js
+// @license          MIT
 // @supportURL       https://github.com/Roger-WIN/greasemonkey-user-scripts/issues
 // @contributionURL  https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=RogerKung.WIN@outlook.com&item_name=Greasy+Fork+donation
 // ==/UserScript==
