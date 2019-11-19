@@ -4,7 +4,7 @@
 // @description      Moegirl 萌娘百科优先使用简体中文浏览
 // @version          1.1.2
 // @match            *.moegirl.org/*
-// @require          https://greasyfork.org/scripts/392621-%E4%BC%98%E5%85%88%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87/code/%E4%BC%98%E5%85%88%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87.js?version=750873
+// @require          https://greasyfork.org/scripts/392621-%E4%BC%98%E5%85%88%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87/code/%E4%BC%98%E5%85%88%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87.js?version=750875
 // @author           神齐 <RogerKung.WIN@outlook.com>
 // @license          MIT
 // @updateURL        https://raw.githubusercontent.com/Roger-WIN/greasemonkey-user-scripts/master/Chinese%20(Simplified)%20first/Moegirl/script.js
