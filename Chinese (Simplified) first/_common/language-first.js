@@ -2,10 +2,10 @@
 // @name             优先简体中文
 // @namespace        https://github.com/Roger-WIN/greasemonkey-user-scripts
 // @description      网站优先使用简体中文浏览
+// @version          1.0.2
 // @author           神齐 <RogerKung.WIN@outlook.com>
-// @version          1.0.1
-// @updateURL        https://raw.githubusercontent.com/Roger-WIN/greasemonkey-user-scripts/master/Chinese%20(Simplified)%20first/_common/language-first.js
 // @license          MIT
+// @updateURL        https://raw.githubusercontent.com/Roger-WIN/greasemonkey-user-scripts/master/Chinese%20(Simplified)%20first/_common/language-first.js
 // @supportURL       https://github.com/Roger-WIN/greasemonkey-user-scripts/issues
 // @contributionURL  https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=RogerKung.WIN@outlook.com&item_name=Greasy+Fork+donation
 // ==/UserScript==
@@ -39,8 +39,3 @@ function convertWithExclude(lang_target, langs_head, flag_exclude, lang_default 
         return; // 退出函数，避免转换
     convert(lang_target, langs_head, lang_default);
 }
-
-export {
-    convertWithoutExclude,
-    convertWithExclude
-};
