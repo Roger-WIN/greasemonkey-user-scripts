@@ -1,9 +1,10 @@
-var url = window.location.href,
+/* jshint esversion: 6 */
+
+const url = window.location.href,
     domainName = window.location.hostname,
     host = window.location.protocol.concat("//", domainName),
     pathName = window.location.pathname,
     fullPath = url.substring(host.length);
-var newUrl;
 
 function convertWithoutExclude(lang_target, langs_head, lang_default = '/') {
     if (pathName.startsWith(lang_target)) // 网页已转换
@@ -21,6 +22,6 @@ function convertWithExclude(lang_target, langs_head, flag_exclude, lang_default 
 
 function convert(lang_target, langs_head, lang_default) {
     var index = (pathName.startsWith(langs_head)) ? (fullPath.substring(1).indexOf('/') + 2) : lang_default.length;
-    newUrl = host.concat(lang_target, fullPath.substring(index)); // 替换或指定为目标语言
+    var newUrl = host.concat(lang_target, fullPath.substring(index)); // 替换或指定为目标语言
     window.location.replace(newUrl); // 替换网页
 }
