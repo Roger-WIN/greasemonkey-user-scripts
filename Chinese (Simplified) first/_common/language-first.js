@@ -3,7 +3,7 @@
 // @namespace        https://github.com/Roger-WIN/greasemonkey-user-scripts
 // @description      网站优先使用简体中文浏览
 // @author           神齐 <RogerKung.WIN@outlook.com>
-// @version          1.0
+// @version          1.0.1
 // @updateURL        https://raw.githubusercontent.com/Roger-WIN/greasemonkey-user-scripts/master/Chinese%20(Simplified)%20first/_common/language-first.js
 // @license          MIT
 // @supportURL       https://github.com/Roger-WIN/greasemonkey-user-scripts/issues
@@ -24,12 +24,14 @@ function convert(lang_target, langs_head, lang_default) {
     window.location.replace(newUrl); // 替换网页
 }
 
+/* 没有需要排除的情况 */
 function convertWithoutExclude(lang_target, langs_head, lang_default = '/') {
     if (pathName.startsWith(lang_target)) // 网页已转换
         return; // 退出函数，避免重复转换
     convert(lang_target, langs_head, lang_default);
 }
 
+/* 有需要排除的情况 */
 function convertWithExclude(lang_target, langs_head, flag_exclude, lang_default = '/') {
     if (pathName.startsWith(lang_target)) // 网页已转换
         return; // 退出函数，避免重复转换
