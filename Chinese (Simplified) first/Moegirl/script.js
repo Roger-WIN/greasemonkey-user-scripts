@@ -4,12 +4,18 @@
 // @description      Moegirl 萌娘百科优先使用简体中文浏览
 // @author           神齐 <RogerKung.WIN@outlook.com>
 // @match            *.moegirl.org/*
-// @version          1.1.0
+// @version          1.1.1
 // @updateURL        https://raw.githubusercontent.com/Roger-WIN/greasemonkey-user-scripts/master/Chinese%20(Simplified)%20first/Moegirl/script.js
 // @license          MIT
 // @supportURL       https://github.com/Roger-WIN/greasemonkey-user-scripts/issues
 // @contributionURL  https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=RogerKung.WIN@outlook.com&item_name=Greasy+Fork+donation
 // ==/UserScript==
+
+/* jshint esversion: 6 */
+
+import {
+    convertWithExclude
+} from '../_common/language-first';
 
 (function () {
     "use strict";

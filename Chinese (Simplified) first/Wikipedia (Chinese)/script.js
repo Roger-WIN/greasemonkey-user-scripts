@@ -5,12 +5,18 @@
 // @author           神齐 <RogerKung.WIN@outlook.com>
 // @match            *zh.wikipedia.org/*
 // @match            *zh.m.wikipedia.org/*
-// @version          1.1.1
+// @version          1.1.2
 // @updateURL        https://raw.githubusercontent.com/Roger-WIN/greasemonkey-user-scripts/master/Chinese%20(Simplified)%20first/Wikipedia%20(Chinese)/script.js
 // @license          MIT
 // @supportURL       https://github.com/Roger-WIN/greasemonkey-user-scripts/issues
 // @contributionURL  https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=RogerKung.WIN@outlook.com&item_name=Greasy+Fork+donation
 // ==/UserScript==
+
+/* jshint esversion: 6 */
+
+import {
+    convertWithExclude
+} from '../_common/language-first';
 
 (function () {
     "use strict";
