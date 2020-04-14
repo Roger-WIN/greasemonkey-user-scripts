@@ -2,7 +2,7 @@
 // @name             优先简体中文
 // @namespace        https://github.com/Roger-WIN/greasemonkey-user-scripts
 // @description      网站优先使用简体中文浏览
-// @version          1.0.5
+// @version          1.0.6
 // @author           神齐 <RogerKung.WIN@outlook.com>
 // @license          MIT
 // @updateURL        https://github.com/Roger-WIN/greasemonkey-user-scripts/raw/master/Chinese%20(Simplified)%20first/_common/language-first.js
@@ -10,15 +10,13 @@
 // @contributionURL  https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=RogerKung.WIN@outlook.com&item_name=Greasy+Fork+donation
 // ==/UserScript==
 
-/* jshint esversion: 6 */
-
 const url = window.location.href,
     domain = window.location.hostname,
     home = window.location.protocol.concat("//", domain),
     pathName = window.location.pathname,
     fullPath = url.substring(home.length);
 
-function convert(lang_target, langs_head, lang_default) {
+const convert = (lang_target, langs_head, lang_default) => {
     let index = (arguments.length > 1) ?
         (pathName.startsWith(langs_head) ?
             (fullPath.substring(1).indexOf('/') + 2) :
@@ -30,7 +28,7 @@ function convert(lang_target, langs_head, lang_default) {
 }
 
 /* 没有需要排除的情况 */
-function convertWithoutExclude(lang_target, langs_head, lang_default = '/') {
+const convertWithoutExclude = (lang_target, langs_head, lang_default = '/') => {
     if (pathName.startsWith(lang_target)) // 网页已转换
         return; // 退出函数，避免重复转换
     if (arguments.length > 1)
@@ -40,7 +38,7 @@ function convertWithoutExclude(lang_target, langs_head, lang_default = '/') {
 }
 
 /* 有需要排除的情况 */
-function convertWithExclude(lang_target, langs_head, flags_exclude, lang_default = '/') {
+const convertWithExclude = (lang_target, langs_head, flags_exclude, lang_default = '/') => {
     if (pathName.startsWith(lang_target)) // 网页已转换
         return; // 退出函数，避免重复转换
     flags_exclude.forEach(flagItem => {
