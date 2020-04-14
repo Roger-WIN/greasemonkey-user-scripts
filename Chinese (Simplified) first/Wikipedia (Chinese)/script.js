@@ -2,7 +2,7 @@
 // @name             中文维基百科优先简体中文
 // @namespace        https://github.com/Roger-WIN/greasemonkey-user-scripts
 // @description      Wikipedia 维基百科（中文）优先使用简体中文浏览
-// @version          1.1.6
+// @version          1.1.7
 // @match            *zh.wikipedia.org/*
 // @match            *zh.m.wikipedia.org/*
 // @require          https://greasyfork.org/scripts/392621-%E4%BC%98%E5%85%88%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87/code/%E4%BC%98%E5%85%88%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87.js
@@ -18,5 +18,5 @@
     let langs_head = "/zh"; // 表示页面是否指定语言
     let lang_default = "/wiki/";
     let flags_exclude = ["/w/"];
-    convertWithExclude(lang_target, langs_head, flags_exclude, lang_default);
+    convertWithExclude(lang_target, flags_exclude, langs_head, lang_default);
 })();

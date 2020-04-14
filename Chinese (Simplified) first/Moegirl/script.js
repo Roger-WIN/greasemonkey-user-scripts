@@ -2,7 +2,7 @@
 // @name             萌娘百科优先简体中文
 // @namespace        https://github.com/Roger-WIN/greasemonkey-user-scripts
 // @description      Moegirl 萌娘百科优先使用简体中文浏览
-// @version          1.1.5
+// @version          1.1.6
 // @match            *zh.moegirl.org/*
 // @match            *mzh.moegirl.org/*
 // @require          https://greasyfork.org/scripts/392621-%E4%BC%98%E5%85%88%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87/code/%E4%BC%98%E5%85%88%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87.js
@@ -17,5 +17,5 @@
     const lang_target = "/zh-cn/"; // 目标语言
     let langs_head = "/zh"; // 表示页面是否指定语言
     let flags_exclude = ['.']; // 表示路径中含有文件，因为文件的扩展名以 . 开头
-    convertWithExclude(lang_target, langs_head, flags_exclude);
+    convertWithExclude(lang_target, flags_exclude, langs_head);
 })();

@@ -2,7 +2,7 @@
 // @name             优先简体中文
 // @namespace        https://github.com/Roger-WIN/greasemonkey-user-scripts
 // @description      网站优先使用简体中文浏览
-// @version          1.0.6
+// @version          1.0.7
 // @author           神齐 <RogerKung.WIN@outlook.com>
 // @license          MIT
 // @updateURL        https://github.com/Roger-WIN/greasemonkey-user-scripts/raw/master/Chinese%20(Simplified)%20first/_common/language-first.js
@@ -16,37 +16,41 @@ const url = window.location.href,
     pathName = window.location.pathname,
     fullPath = url.substring(home.length);
 
-const convert = (lang_target, langs_head, lang_default) => {
-    let index = (arguments.length > 1) ?
-        (pathName.startsWith(langs_head) ?
+const convert = (lang_target, ...args) => {
+    let index;
+    if (Array.isArray(args) && args.length > 0) {
+        let [langs_head, lang_default] = args;
+        index = pathName.startsWith(langs_head) ?
             (fullPath.substring(1).indexOf('/') + 2) :
-            lang_default.length
-        ) :
-        lang_target.length;
+            lang_default.length;
+    } else
+        index = lang_target.length;
     let newUrl = home.concat(lang_target, fullPath.substring(index)); // 替换或指定为目标语言
     window.location.replace(newUrl); // 替换网页
 }
 
 /* 没有需要排除的情况 */
-const convertWithoutExclude = (lang_target, langs_head, lang_default = '/') => {
+const convertWithoutExclude = (lang_target, ...args) => {
     if (pathName.startsWith(lang_target)) // 网页已转换
         return; // 退出函数，避免重复转换
-    if (arguments.length > 1)
+    if (Array.isArray(args) && args.length > 0) {
+        let [langs_head, lang_default = '/'] = args;
         convert(lang_target, langs_head, lang_default);
-    else
+    } else
         convert(lang_target);
 }
 
 /* 有需要排除的情况 */
-const convertWithExclude = (lang_target, langs_head, flags_exclude, lang_default = '/') => {
+const convertWithExclude = (lang_target, flags_exclude, ...args) => {
     if (pathName.startsWith(lang_target)) // 网页已转换
         return; // 退出函数，避免重复转换
     flags_exclude.forEach(flagItem => {
         if (pathName.includes(flagItem)) // 网页不可转换
             return; // 退出函数，避免转换
     });
-    if (arguments.length > 2)
+    if (Array.isArray(args) && args.length > 0) {
+        let [langs_head, lang_default = '/'] = args;
         convert(lang_target, langs_head, lang_default);
-    else
+    } else
         convert(lang_target);
 }
