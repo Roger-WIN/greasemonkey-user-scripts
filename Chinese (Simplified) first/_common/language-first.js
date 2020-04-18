@@ -2,7 +2,7 @@
 // @name             优先简体中文
 // @namespace        https://github.com/Roger-WIN/greasemonkey-user-scripts
 // @description      网站优先使用简体中文浏览
-// @version          1.0.7
+// @version          1.0.8
 // @author           神齐 <RogerKung.WIN@outlook.com>
 // @license          MIT
 // @updateURL        https://github.com/Roger-WIN/greasemonkey-user-scripts/raw/master/Chinese%20(Simplified)%20first/_common/language-first.js
@@ -44,10 +44,9 @@ const convertWithoutExclude = (lang_target, ...args) => {
 const convertWithExclude = (lang_target, flags_exclude, ...args) => {
     if (pathName.startsWith(lang_target)) // 网页已转换
         return; // 退出函数，避免重复转换
-    flags_exclude.forEach(flagItem => {
+    for (const flagItem of flags_exclude)
         if (pathName.includes(flagItem)) // 网页不可转换
             return; // 退出函数，避免转换
-    });
     if (Array.isArray(args) && args.length > 0) {
         let [langs_head, lang_default = '/'] = args;
         convert(lang_target, langs_head, lang_default);
