@@ -13,6 +13,7 @@
 // ==/UserScript==
 
 (() => {
-    const lang_target = "/zh-cn/"; // 目标语言
+    // 目标语言
+    const lang_target = "/zh-cn/";
     convertWithExclude(lang_target, ['/answers/']);
 })();
