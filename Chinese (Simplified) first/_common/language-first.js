@@ -24,7 +24,9 @@ const convert = (lang_target, ...args) => {
         index = pathName.startsWith(langs_head) ?
             fullPath.substring(1).indexOf("/") + 2 :
             lang_default.length;
-    } else index = lang_target.length;
+    } else {
+        index = lang_target.length
+    }
     // 替换或指定为目标语言
     let newUrl = home.concat(lang_target, fullPath.substring(index));
     // 替换网页
