@@ -1,6 +1,10 @@
-当访问[微软文档](https://docs.microsoft.com/)时，优先切换到简体中文进行浏览。
+当访问[微软文档](https://docs.microsoft.com/)、[微软支持文档](https://support.microsoft.com/)时，优先切换到简体中文进行浏览。
 
 ## 更新日志
+
+### 1.0.5 (2022-02-12)
+
+添加对[微软支持文档](https://support.microsoft.com/)的支持
 
 ### 1.0.4 (2021-10-09)
 
