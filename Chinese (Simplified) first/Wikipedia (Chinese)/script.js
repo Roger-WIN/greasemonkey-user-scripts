@@ -2,7 +2,7 @@
 // @name             中文维基百科优先简体中文
 // @namespace        https://github.com/Roger-WIN/greasemonkey-user-scripts
 // @description      Wikipedia 维基百科（中文）优先使用简体中文浏览
-// @version          1.3.0
+// @version          1.3.1
 // @match            *zh.wikipedia.org/*
 // @match            *zh-yue.wikipedia.org/*
 // @match            *zh.m.wikipedia.org/*
@@ -25,5 +25,5 @@
     if (convertSubdomain()) {
         convertWithExclude(lang_target, flags_exclude, langs_head, lang_default);
     }
-    convertToDesktop(3, "m.");
+    convertToDesktop(2, ".m");
 })();
