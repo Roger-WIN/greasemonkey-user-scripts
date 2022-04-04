@@ -2,7 +2,7 @@
 // @name             优先简体中文
 // @namespace        https://github.com/Roger-WIN/greasemonkey-user-scripts
 // @description      网站优先使用简体中文浏览
-// @version          1.1.1
+// @version          1.2.0
 // @match            *
 // @author           神齐 <RogerKung.WIN@outlook.com>
 // @license          MIT
@@ -102,5 +102,30 @@ const convertSubdomain = (subdomain_target = "zh", subdomain_preserve = 'm') => 
     }
     let new_domain = new_subdomain + DELIMITER + mainDomain;
     let newUrl = protocol + new_domain + fullPath;
+    window.location.replace(newUrl);
+};
+
+const isMobile = () => {
+    return navigator.userAgent.match(
+        /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+    );
+};
+
+const convertToDesktop = (position, flag_mobile = "m", flag_alternative = "") => {
+    // 设备处于移动端
+    if (isMobile()) {
+        return;
+    }
+    // 超出域名
+    if (position >= domain.length) {
+        return;
+    }
+    // 网页已转换
+    if (domain.slice(position, position + flag_mobile.length) !== flag_mobile) {
+        return;
+    }
+
+    let newDomain = domain.slice(0, position) + flag_alternative + domain.slice(position + flag_mobile.length);
+    let newUrl = protocol + newDomain + fullPath;
     window.location.replace(newUrl);
 };
