@@ -4,9 +4,7 @@
 // @description      Wikipedia 维基百科（中文）优先使用简体中文浏览
 // @version          1.3.1
 // @match            *zh.wikipedia.org/*
-// @match            *zh-yue.wikipedia.org/*
 // @match            *zh.m.wikipedia.org/*
-// @match            *zh-yue.m.wikipedia.org/*
 // @require          https://cdn.jsdelivr.net/gh/Roger-WIN/greasemonkey-user-scripts@bf3bbd28ab2ecfc677a3836ddc8a9c7943dca2d1/Chinese%20(Simplified)%20first/_common/language-first.js
 // @author           神齐 <RogerKung.WIN@outlook.com>
 // @license          MIT
