@@ -10,9 +10,12 @@
 - 大马简体（`zh-Hans-MY`）
 - 新加坡简体（`zh-Hans-SG`）
 - 臺灣正體（`zh-Hant-TW`）
-- 粤语（`zh-yue`）
 
 ## 更新日志
+
+### 1.3.2 (2022-06-07)
+
+依[用户反馈](https://github.com/Roger-WIN/greasemonkey-user-scripts/pull/3)，暂且禁用对粤语的适配
 
 ### 1.3.1 (2022-04-04)
 

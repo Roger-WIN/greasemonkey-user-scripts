@@ -2,7 +2,7 @@
 // @name             中文维基百科优先简体中文
 // @namespace        https://github.com/Roger-WIN/greasemonkey-user-scripts
 // @description      Wikipedia 维基百科（中文）优先使用简体中文浏览
-// @version          1.3.1
+// @version          1.3.2
 // @match            *zh.wikipedia.org/*
 // @match            *zh.m.wikipedia.org/*
 // @require          https://cdn.jsdelivr.net/gh/Roger-WIN/greasemonkey-user-scripts@bf3bbd28ab2ecfc677a3836ddc8a9c7943dca2d1/Chinese%20(Simplified)%20first/_common/language-first.js
